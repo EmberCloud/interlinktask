@@ -2,7 +2,7 @@ package InterLinkTask;
 
 
 // клас який наслідує інтерфейс овал і інтрефейс площа
-public class FigureCircle extends Oval implements Square {
+public class FigureCircle implements Square {
     private int r;//радиус
 
     public FigureCircle(){
