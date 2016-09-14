@@ -3,19 +3,21 @@ package InterLinkTask;
 
 // клас який наслідує інтерфейс овал і інтрефейс площа
 public class FigureCircle implements Square {
-    private int r;//радиус
+    private int radius;//радиус
 
     public FigureCircle(){
-        this.r=5;
+        this.radius=5;
     }
 
-    public FigureCircle(int r){
-        if (r>0){
-            this.r=r;
+    public FigureCircle(int radius){
+        if (radius>0){
+            this.radius=radius;
         }
+        else throw new IllegalArgumentException("Такой круг нельзя построить");
     }
+
     // реалізація методу площа для кола  унаслідований від інтерфейсу площа
     public double getSquare() {
-        return r*r*Math.PI;
+        return radius*radius*Math.PI;
     }
 }

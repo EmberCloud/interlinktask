@@ -13,7 +13,6 @@ public class FigureTriangle extends Figure {
         this.c=5;
     }
     public FigureTriangle(int a, int b, int c)
-
     // перевірка існування трикутника
     {
         if  ( (a>0)&&(b>0)&&(c>0))
@@ -27,6 +26,7 @@ public class FigureTriangle extends Figure {
         }
         else throw new IllegalArgumentException("Стороны треуголинка не могут быть меньше нуля");
     }
+
     /** метод знаходження периметра реалізований в класі і унаслідуваний від
      * абстрактного класу Figure*/
      public   int perimeter(){

@@ -4,4 +4,5 @@ package InterLinkTask;
 public  interface Square {
 
     double getSquare();
+
 }
