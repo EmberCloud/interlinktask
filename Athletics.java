@@ -21,7 +21,7 @@ public class Athletics extends Sportsmen{
     }
 
     protected double Result() {
-        if ((distance==0)&&(timeInSeconds == 0))
+        if (timeInSeconds == 0)
             return 0;
         else
             return distance/timeInSeconds;
@@ -48,25 +48,7 @@ public class Athletics extends Sportsmen{
         else
             throw new IllegalArgumentException("time can't be negative ");
     }
-    @Override
-    public String getFirstName() {
-        return super.getFirstName();
-    }
-
-    @Override
-    public void setFirstName(String firstName) {
-        super.setFirstName(firstName);
-    }
-
-    @Override
-    public String getLastName() {
-        return super.getLastName();
-    }
-
-    @Override
-    public void setLastName(String lastName) {
-        super.setLastName(lastName);
-    }
+    
     @Override
     public String toString() {
         return "Athlete "+getLastName()+" "+getFirstName()+" average speed  : "+Result()+"m/s at "+getDistance()+" m distance";
