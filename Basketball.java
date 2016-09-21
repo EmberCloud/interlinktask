@@ -21,7 +21,7 @@ public class Basketball extends Sportsmen{
     }
 
     protected double Result(){
-        if ((overallPointsEarned == 0)&&(gamesPlayed == 0))
+        if (gamesPlayed == 0)
             return 0;
         else
             return overallPointsEarned/gamesPlayed;
@@ -49,25 +49,7 @@ public class Basketball extends Sportsmen{
             throw new IllegalArgumentException("overall earned points can't be negative");
     }
 
-    @Override
-    public String getFirstName() {
-        return super.getFirstName();
-    }
-
-    @Override
-    public void setFirstName(String firstName) {
-        super.setFirstName(firstName);
-    }
-
-    @Override
-    public String getLastName() {
-        return super.getLastName();
-    }
-
-    @Override
-    public void setLastName(String lastName) {
-        super.setLastName(lastName);
-    }
+    
     @Override
     public String toString() {
         return "Basketball player "+getLastName()+" "+getFirstName()+" average statisticks is : "+Result()+" points per game";
