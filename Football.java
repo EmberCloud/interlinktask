@@ -15,15 +15,20 @@ public class Football extends Sportsmen{
     public Football(String firstname, String lastname, int shotsInTarget, int shotsOverall) {
         setLastName(lastname);
         setFirstName(firstname);
-        setShotsOverall(shotsOverall);
-        setShotsInTarget(shotsInTarget);
+        if (shotOveral>=shotInTarget){
+            setShotsOverall(shotsOverall);
+            setShotsInTarget(shotsInTarget);
+        }
+        else
+            throw new IllegalArgumentException(" overall shot can't be bigger than shot in target ");
     }
 
     @Override
     protected double Result(){
-        if ((shotsInTarget == 0)&&(shotsOverall == 0)) return 0;
+        if (shotsOverall == 0)
+            return 0;
         else
-        return (shotsInTarget*100)/shotsOverall;
+            return (shotsInTarget*100)/shotsOverall;
     }
 
 
@@ -51,26 +56,6 @@ public class Football extends Sportsmen{
         else{
             throw new IllegalArgumentException(" shots in target can't be negative");
         }
-    }
-
-    @Override
-    public String getFirstName() {
-        return super.getFirstName();
-    }
-
-    @Override
-    public void setFirstName(String firstName) {
-        super.setFirstName(firstName);
-    }
-
-    @Override
-    public String getLastName() {
-        return super.getLastName();
-    }
-
-    @Override
-    public void setLastName(String lastName) {
-        super.setLastName(lastName);
     }
 
     @Override
