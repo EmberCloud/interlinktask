@@ -17,7 +17,7 @@ public abstract class Sportsmen {
     }
 
     public void setFirstName(String firstName) {
-        if (firstName.matches("^[a-zA-Z]+$"))
+        if (firstName.matches("^[a-zA-Z\-]+$"))
             this.firstName = firstName;
         else
             throw new IllegalArgumentException("illegal  First name ");
@@ -25,7 +25,7 @@ public abstract class Sportsmen {
     }
 
     public void setLastName(String lastName) {
-        if (lastName.matches("^[a-zA-Z]+$"))
+        if (lastName.matches("^[a-zA-Z\-]+$"))
             this.lastName = lastName;
         else
             throw new IllegalArgumentException("illegal Last name ");
